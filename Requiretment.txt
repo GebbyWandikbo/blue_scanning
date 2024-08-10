@@ -1,0 +1,7 @@
+Copy this:
+1. pip install python-whois
+2. git clone https://github.com/aboul3la/Sublist3r.git
+3. cd Sublist3r
+4. pip install -r requirements.txt
+
+With these steps completed, you can now use Blue Scanning.
