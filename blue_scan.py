@@ -8,24 +8,24 @@ def validasi_domain(domain):
 
 # Informasi Domain
 def domain():
-    add = input("Masukkan Domain Target (contoh: example.com): ").strip()
+    add = input("Enter Your Domain Target (Example: example.com): ").strip()
     if not validasi_domain(add):
-        print("[Error] --- Domain tidak valid.")
+        print("[Error] --- Domain Is Not Valid.")
         return
     
     try:
         informasi = whois.whois(add)
-        print("Ini adalah informasi dari domain yang ingin Anda cari")
+        print("Here Is The Information Of Your Domain Target")
         print("--------------------------------------------\n")
         print(informasi)
     except Exception as e:
-        print(f"[Error] --- Terjadi kesalahan: {e}")
+        print(f"[Error] --- Theres Someting Wrong: {e}")
 
 # Subdomain
 def subdomain():
-    add = input("Masukkan Domain Target (contoh: example.com): ").strip()
+    add = input("Enter Your Domain Target (Example: example.com): ").strip()
     if not validasi_domain(add):
-        print("[Error] --- Domain tidak valid.")
+        print("[Error] --- Domain Is Not valid.")
         return
     
     try:
@@ -37,12 +37,12 @@ def subdomain():
         filtered_output = "\n".join(line for line in result.stdout.splitlines() if not any(
             keyword in line for keyword in ["Error:", "Searching now in", "Total Unique Subdomains Found"]
         ))
-        print("Hasil Subdomain:")
+        print("Result Of Your Subdomain:")
         print(filtered_output)
     except FileNotFoundError:
-        print("[Error] --- Sublist3r tidak ditemukan. Pastikan Sublist3r terinstal dengan benar.")
+        print("[Error] --- Sublist3r Is not fund. Make sure Sublist3r is installed.")
     except Exception as e:
-        print(f"[Error] --- Terjadi kesalahan: {e}")
+        print(f"[Error] --- Theres Someting Wrong: {e}")
 
 def main():
     while True:
@@ -51,7 +51,7 @@ def main():
         print("[0] --- Exit")
         print("--------------------------------------------")
         
-        pilihan = input("Masukkan pilihan Anda: ").strip()
+        pilihan = input("Enter your choice: ").strip()
         
         if pilihan == "1":
             domain()
@@ -61,7 +61,7 @@ def main():
             print("Bye!!")
             break
         else:
-            print("[Error] --- Masukkan nomor sesuai pilihan Anda")
+            print("[Error] --- Select The Number By The Options")
 
 if __name__ == "__main__":
     main()
