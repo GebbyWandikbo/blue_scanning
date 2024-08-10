@@ -1,4 +1,5 @@
-#scanning
+#scanning #domain #subdomain #scan
+
 Blue Scanning
 This program allows you to scan any domain and its subdomains to retrieve detailed information. It provides two main functionalities:
 1. Domain Information Scan: Retrieve WHOIS information about a specific domain.
